@@ -2,20 +2,12 @@
 "use strict";
 var sys = require('sys');
 (function () {
-  var i, n;
+  var i, msg;
   for (i = 1; i <= 100; i += 1) {
-    n = false;
+    msg = '';
 
-    if (0 === (i % 3)) {
-      n = true;
-      sys.print("Fizz");
-    }
-    if (0 === (i % 5)) {
-      n = true;
-      sys.print("Buzz");
-    }
-    if (true === n) {
-      sys.print("\n");
-    }
+    if (0 === (i % 3)) { msg += "Fizz"; }
+    if (0 === (i % 5)) { msg += "Buzz"; }
+    if (msg.length > 0) { console.log(msg); }
   }
 }());
