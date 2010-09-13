@@ -1,0 +1,12 @@
+
+99	flintstone3	DINO	21 1
+652	DUCK		donald	50 2
+
+1314	RUBBLE		Betty	78 3
+8321	FLINTSTONE1	WILMA	99 4
+7114	mouse		Mickey	95 5
+0210	MOUSE2		Minnie	90 6
+
+3789	FLINTSTONE2	Pebbles	78 7
+4952	flintstone4	FRED	38 8
+5785	rubble1		barney	87 9

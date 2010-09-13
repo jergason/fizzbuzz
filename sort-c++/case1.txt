@@ -1,0 +1,7 @@
+ebob	ydole	elou	12
+abob	edole	ylou	54
+obob	odole	elou	452
+ebob	adole	jlou	9
+ubob	pdole	qlou	0
+ibob	idole	clou	58
+ybob	zdole	glou	174
