@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 6 November 2007), see www.w3.org"><title>Collections Part I and II</title>
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=us-ascii">
+  <meta http-equiv="content-style-type" content="text/css">
+  <link rel="stylesheet" type="text/css" media="screen,projection" href="collections_files/style.css"></head><body>
+  <div class="box">
+    <h1>Computer Science 240 :: Advanced Programming</h1>
+  </div>
+
+  <div class="main">
+    <div class="center">
+      <h2>Collections</h2>
+    </div>
+    <hr>
+
+    <p><b>NOTE: This project is divided into two parts (Part I and
+    Part II). For the Programming Exam you only need to complete
+    Part I. Part II will be completed after the Programming
+    Exam.</b></p>
+
+    <h3>Overview</h3>
+
+    <p>Most non-trivial programs use data structures to store and
+    access information. Common examples are lists, stacks, queues,
+    trees, etc. Data structures are also called "collections"
+    because they are used to manage groups (or collections) of
+    objects. For this assignment you will write two collection
+    classes in C++. You will write a class named
+    <tt>LinkedList</tt> that implements a doubly-linked list and a
+    class named <tt>BST</tt> that implements a binary search tree.
+    Unlike the previous projects, you will not be asked to deliver
+    a complete running program. Rather, the deliverables for this
+    project are just the <tt>LinkedList</tt> and <tt>BST</tt>
+    classes. To pass off your project, we will take your classes
+    and compile and link them with a test program that will
+    exercise your code and verify that it works. It is your
+    responsibility to test your code and make sure that it works
+    before passing off.</p>
+
+    <h3>Project Files</h3>
+
+    <p>Header files for the <tt>LinkedList</tt> and <tt>BST</tt>
+    classes are provided at the following links:</p>
+
+    <p><a href="http://students.cs.byu.edu/%7Ecs240ta/winter2008/projects/collections/LinkedList.h">LinkedList.h</a></p>
+
+    <p><a href="http://students.cs.byu.edu/%7Ecs240ta/winter2008/projects/collections/BST.h">BST.h</a></p>
+
+    <p>Your task is to implement all of the methods on the
+    <span style="font-family: &quot;Courier New&quot;;">LinkedList</span> and
+    <span style="font-family: &quot;Courier New&quot;;">BST</span> classes
+    according to the comments in the header files. You should place
+    your <span style="font-family: &quot;Courier New&quot;;">LinkedList</span>
+    and <span style="font-family: &quot;Courier New&quot;;">BST</span>
+    implementations in files named <span style="font-family: &quot;Courier New&quot;;">LinkedList.cpp</span> and
+    <span style="font-family: &quot;Courier New&quot;;">BST.cpp</span>,
+    respectively. You should not modify the public interfaces of
+    the classes. If you do, the test program that will be used to
+    pass off your code will not compile. You may (and probably
+    should) modify the <span style="font-family: &quot;Courier New&quot;;">.h</span> files to add private
+    method and variable declarations, but your method bodies should
+    go in the <span style="font-family: &quot;Courier New&quot;;">.cpp</span>
+    files.</p>
+
+    <p>The test program will assume that your files are named
+    <span style="font-family: &quot;Courier New&quot;;">LinkedList.h</span>,
+    <span style="font-family: &quot;Courier New&quot;;">LinkedList.cpp</span>,
+    <span style="font-family: &quot;Courier New&quot;;">BST.h</span>, and
+    <span style="font-family: &quot;Courier New&quot;;">BST.cpp</span> Since
+    Linux file names are case sensitive, capitalization does
+    matter.</p>
+
+    <h3>Restrictions</h3>
+
+    <p>For this project you <u>are</u> allowed to use the C++
+    string class defined in the <span style="font-family: &quot;Courier New&quot;;">&lt;string&gt;</span> header file
+    (in fact, you must use it to make your code work).</p>
+
+    <p>You <u>are not</u> allowed to use the classes and functions
+    from the Standard Template Library (vector, list, map, set,
+    etc.). Specifically, the following header files may not be
+    used:</p>
+
+    <ul>
+      <li>&lt;algorithm&gt;</li>
+
+      <li>&lt;deque&gt;</li>
+
+      <li>&lt;list&gt;</li>
+
+      <li>&lt;map&gt;</li>
+
+      <li>&lt;queue&gt;</li>
+
+      <li>&lt;set&gt;</li>
+
+      <li>&lt;stack&gt;</li>
+
+      <li>&lt;vector&gt;</li>
+    </ul>
+
+    <h3>Part I</h3>
+
+    <p>Implement all of the methods on the <span style="font-family: &quot;Courier New&quot;;">LinkedList</span> and <span style="font-family: &quot;Courier New&quot;;">BST</span> classes.</p>
+
+    <p>For Part I your code will not be tested for memory
+    management errors. That will come in Part II.</p>
+
+    <h3>Part II</h3>
+
+    <p>Ensure that your code does not contain any memory management
+    errors, as described in the <i>Memory Management Errors</i>
+    section of the Project I specification. The TAs will use
+    <span style="font-family: &quot;Courier New&quot;;">valgrind</span> to
+    check your code for memory-related errors when you pass off.
+    You should run <span style="font-family: &quot;Courier New&quot;;">valgrind</span> on your code and
+    fix any reported bugs before attempting to pass off.</p>
+
+	<p>Not all memory errors are your fault and there are cases of false positives.  We offer a <a href="http://students.cs.byu.edu/%7Ecs240ta/util_docs/string.supp">file</a> to suppress these for you.</p>
+  </div>
+		<div class="menu">
+			<div class="nav">
+				<div>Main Menu</div>
+					<dl>
+						<dd><a href="http://students.cs.byu.edu/%7Ecs240ta/winter2008/">Home Page</a></dd>
+					</dl><dl>
+						<dt><a>Class Information</a></dt>
+						<dd><a href="http://students.cs.byu.edu/%7Ecs240ta/winter2008/info/policies.php">Policies</a></dd>
+						<dd><a href="http://students.cs.byu.edu/%7Ecs240ta/winter2008/info/schedule.php">Schedule</a></dd>
+						<dd><a href="http://students.cs.byu.edu/%7Ecs240ta/winter2008/projects/">Projects</a></dd>
+						<dd><a href="http://students.cs.byu.edu/%7Ecs240ta/winter2008/tutorials/">Tutorials</a></dd>
+						<dd><a href="http://students.cs.byu.edu/%7Ecs240ta/winter2008/TA/">TA Schedule</a></dd>
+					</dl><dl>
+						<dt><a>Help</a></dt>
+						<dd><a href="http://gotapi.com/ccpp" target="_blank">C++ API</a></dd>
+						<dd><a href="http://boost.org/libs/libraries.htm" target="_blank">Boost API</a></dd>
+						<dd><a href="http://students.cs.byu.edu/%7Ecs240ta/winter2008/tutorials/boost.php">Boost?</a></dd>
+						<dd><a href="http://students.cs.byu.edu/%7Ecs240ta/util_docs/" target="_blank">CS 240 Utils API</a></dd>
+						<dd><a href="http://students.cs.byu.edu/%7Ecs240ta/winter2008/resources/">Resources</a></dd>
+					</dl><dl>
+						<dt><a>Contact</a></dt>
+						<dd><a href="http://blackboard.byu.edu/">CS 240 TA's</a></dd>
+						<dd><a href="mailto:rodham@cs.byu.edu">Dr. Ken Rodham</a></dd>
+						<dd><a href="mailto:egbert@cs.byu.edu">Dr. Parris Egbert</a></dd>
+					</dl>
+				</div>
+			</div></body></html>

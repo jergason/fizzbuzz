@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+echo "Running the Collections Test Passoff"
+make -f ./passoff/Makefile $@
