@@ -1,9 +1,24 @@
 FizzBuzz
 ========
 
-An array of the usual suspects - Hello World, FizzBuzz, Fibonacci, more to come...
+An array of the usual suspects.
 
-TODO
+C++
 ----
-  * Echo Client / Server
-  * Ajax Chat
+
+  * linked list
+  * binary search tree
+
+Ruby
+----
+
+  * Fizzbuzz
+  * TCP Echo Server
+  * HTTP Chat Server / Client
+
+JavaScript
+----
+
+  * Hello World
+  * Fizzbuzz
+  * Fibonacci
