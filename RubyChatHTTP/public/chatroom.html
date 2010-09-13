@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AJ the Pirate's Chat Client</title>
+    <link rel="stylesheet" href="stylesheets/main.css" media="screen">
+    <script src="javascripts/jquery-1.4.1.min.js"></script>
+    <script src="javascripts/sammy-0.4.1.min.js"></script>
+    <script src="javascripts/sammy-plugins/sammy.json-0.4.1.min.js"></script>
+    <script src="javascripts/app.js"></script>
+  </head>
+  <body>
+    <script>
+    </script>
+    <p id="main">Ever heard of pirate radio? Pirate chat is better by a factor of 2 <a href="http://www.homestarrunner.com/sbemail39.html" target="_blank">cold one</a>s.</p>
+    <img src="images/coolaj86-pirate.jpg"/>
+    <br/>
+    <div id="container">
+      <div id="wysiwyg">&nbsp;</div>
+    </div>
+    <div id="chat_form">
+      <form action="#/chat" method="post">
+        <label for="room">Room:</label><input name="room" type="text" value="Pirate Ship"/>
+        <br/>
+        <label for="name">Name:</label><input name="name" type="text"/>
+        <br/>
+        <label for="msg">Message:</label><input name="msg" type="text"/>
+        <br/>
+        <input type="submit" value="Send Message"/>
+      </form>
+    </div>
+  </body>
+</html>

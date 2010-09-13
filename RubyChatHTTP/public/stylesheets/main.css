@@ -1,0 +1,17 @@
+#wysiwyg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 300px;
+  overflow: auto;
+  border: black solid 5px;
+}
+
+form input[name=msg] {
+  width: 500px;
+}
+
+form input[type=submit] {
+  visibility: hidden;
+}
