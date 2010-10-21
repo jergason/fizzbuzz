@@ -85,7 +85,7 @@ var HotPlate = {};
       // 0.000000000000001 is the lowest you can go. If you try zero it will run forever (IEEE floating-point errors?)
       repeat = true, // if the base condition has yet to be met
       count = 0, // safeguard in case the base-case logic is incorrect
-      max_count = 10000000000000000;
+      max_count = 15000;
 
     while (true === repeat && count < max_count) {
       variance = 0;
