@@ -1,4 +1,4 @@
-// TODO parse streaming
+// TODO beef up AHR to allow streamed parsing
 "use strict";
 (function (undefined) {
   var fs = require('fs'),
@@ -86,7 +86,7 @@
       stream,
       data = new Buffer('');
 
-    stream = fs.createReadStream(file, { flags: 'r' });
+    stream = fs.createReadStream(file, { flags: 'r', encoding: 'utf8' });
     stream.on('error', function (err) {
       promise.fulfill(err, stream, data);
     });
@@ -148,6 +148,23 @@
       });
     });
     console.log("Average height of male dependent of brown-haired male Heads of Household: " + (heights / count));
+  }
+
+  function parseChunk(chunk) {
+    /*
+    // TODO be more memory efficient
+    // by seeking into the buffer
+    data += chunk
+    while (true) {
+      index = data.indexOf('\n')
+      if (-1 === index) {
+        break;
+      }
+      line = data.substr(0, index);
+      data = data.substr(index + 1);
+      parseLine(line);
+    }
+    */
   }
 
   function parseData(err, x, data) {
