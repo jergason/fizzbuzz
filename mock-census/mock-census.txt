@@ -1,0 +1,19 @@
+#Head First Gender Eye-color Hair-color Height (exactly one per block)
+Head Kevin M brown brown 6.15
+#Dependent First Gender Age Height (0 or more per block)
+Dependent Dagmar F adult 5.9
+Dependent Dorkus M minor 5.7
+#End end-of-block
+End
+Head Eve F blue brown 5.5
+Dependent Adam M adult 6.2
+Dependent Fred M minor 6.1
+Dependent Fredwenda F adult 5.3
+End
+Head Pentultimus M brown brown 6
+End
+Head Beautisha F green red 5.7
+Dependent Bodacious M minor 4.0
+End
+#SUPER-END end-of-file
+SUPER-END
