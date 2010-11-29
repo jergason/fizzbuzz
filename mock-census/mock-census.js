@@ -2,13 +2,11 @@
 "use strict";
 (function (undefined) {
   var fs = require('fs'),
-    url = require('url'),
-    ahr = require('ahr'),
+    request = require('ahr'),
     stream,
     node = process.argv[0],
     self = process.argv[1],
-    fulluri = process.argv[2],
-    uri;
+    fulluri = process.argv[2];
 
   self = self.substr(self.lastIndexOf('/') + 1);
 
@@ -167,7 +165,12 @@
     */
   }
 
-  function parseData(err, x, data) {
+  var data = '';
+  function parseData(err, x, chunk, end) {
+    if (!end) {
+      data += chunk.toString();
+      return;
+    }
     var lines = data.split('\n'),
       heads = [],
       curHead;
@@ -189,18 +192,14 @@
       return;
     }
       
-    uri = url.parse(fulluri, true);
-    if (!uri.protocol) {
-      uri.protocol = '';
-    }
-    if ('file:' === uri.protocol || '' === uri.protocol) {
-      readFile(uri.pathname).when(parseData);
-    } else if (uri.protocol.match(/^http[s]?:$/)) {
-      ahr.get(fulluri).when(parseData);
-    } else {
-      usage();
-      return;
-    }
+    request.get(fulluri, undefined, { stream: true}).when(parseData);
+
+    //if ('file' !== uri.protocol && '' === uri.protocol || uri.protocol.match(/^http[s]?:$/)) {
+    //  request.get(fulluri, undefined, { stream: true}).when(parseData);
+    //} else {
+    //  usage();
+    //  return;
+    //}
   }
 
   main();
