@@ -79,24 +79,6 @@
     return head;
   }
 
-  function readFile(file) {
-    var promise = require('futures').promise(),
-      stream,
-      data = new Buffer('');
-
-    stream = fs.createReadStream(file, { flags: 'r', encoding: 'utf8' });
-    stream.on('error', function (err) {
-      promise.fulfill(err, stream, data);
-    });
-    stream.on('data', function (chunk) {
-      data += chunk;
-    });
-    stream.on('end', function () {
-      promise.fulfill(undefined, stream, data);
-    });
-    return promise;
-  }
-
   // Queries
 
   // Average height of Heads of Household
@@ -167,6 +149,10 @@
 
   var data = '';
   function parseData(err, x, chunk, end) {
+    if (err) {
+      usage();
+      throw err;
+    }
     if (!end) {
       data += chunk.toString();
       return;
@@ -192,14 +178,7 @@
       return;
     }
       
-    request.get(fulluri, undefined, { stream: true}).when(parseData);
-
-    //if ('file' !== uri.protocol && '' === uri.protocol || uri.protocol.match(/^http[s]?:$/)) {
-    //  request.get(fulluri, undefined, { stream: true}).when(parseData);
-    //} else {
-    //  usage();
-    //  return;
-    //}
+    request.get(fulluri, undefined, { stream: true }).when(parseData);
   }
 
   main();
