@@ -1,0 +1,17 @@
+{
+  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.info)",
+  "name": "json-chat",
+  "description": "A simple chat server with message queueing capabilities",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coolaj86/fizzbuzz.git"
+  },
+  "engines": {
+    "node": "~v0.4.8"
+  },
+  "dependencies": {
+      "connect": ">= 1.0.0"
+  },
+  "devDependencies": {}
+}
