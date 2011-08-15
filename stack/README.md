@@ -23,9 +23,17 @@ The storage strategy may
 
 The implementation must pass the following test suite `queue-test.c`
 
-    tar xf stack.tar.gz ~/
+    tar xf stack.tar.gz -C ~/
     cd ~/stack
-    mkdir build
+    mkdir -p build
     cd build
     cmake ../
+    make
     ./stack-test
+
+Prep
+===
+
+    rm -rf stack/stack.c
+    touch stack/stack.c
+    tar czf stack.tar.gz stack/
