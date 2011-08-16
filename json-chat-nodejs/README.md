@@ -29,3 +29,11 @@ Ender.JS Boilerplate:
 
     cd ~/http-chat-nodejs/public
     ender build jeesh querystring ahr2
+
+Prep
+===
+
+    rm -rf json-chat-nodejs/node_modules
+    rm -rf json-chat-nodejs/public/node_modules
+    rm -rf json-chat-nodejs/public/ender.*
+    tar czf json-chat.tar.gz json-chat-nodejs/

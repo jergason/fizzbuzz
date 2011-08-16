@@ -21,7 +21,7 @@ The storage strategy may
   * make copies of the original elements
   * store pointers to the original elements
 
-The implementation must pass the following test suite `queue-test.c`
+The implementation must pass the following test suite `stack-test.c`
 
     tar xf stack.tar.gz -C ~/
     cd ~/stack
