@@ -10,6 +10,7 @@ void fail(char* msg) {
 }
 
 int main(int argc, char* argv[]) {
+  int max_len = 100;
   char* a = "abc";
   char* d = "def";
   char* g = "ghijklmnopqrstuvwxyz";
@@ -58,7 +59,7 @@ int main(int argc, char* argv[]) {
   // Test that stack can hold any number of elements
   //
   len = 1;
-  while (len < 99) {
+  while (len < (max_len - 1)) {
     len += 1;
 
     if (len != s_push(s, (void*) d)) {
@@ -78,11 +79,11 @@ int main(int argc, char* argv[]) {
   //
   // Test edge case of last element inserted and removed
   //
-  if (100 != s_push(s, (void*) g)) {
+  if (max_len != s_push(s, (void*) g)) {
     fail("stack length is not 100");
   }
 
-  if (100 != s_length(s)) {
+  if (max_len != s_length(s)) {
     fail("stack is not length 100 after adding 100 items");
   }
 
@@ -94,7 +95,7 @@ int main(int argc, char* argv[]) {
     fail("stack item 1 doesn't match peek");
   }
 
-  if (99 != s_length(s)) {
+  if ((max_len - 1) != s_length(s)) {
     fail("stack is not length 99 after removing 1 item");
   }
 
@@ -102,7 +103,7 @@ int main(int argc, char* argv[]) {
   //
   // Test that the stack can be emptied as it was filled
   //
-  len = 99;
+  len = max_len - 1;
   while (len > 1) {
     len -= 1;
 
