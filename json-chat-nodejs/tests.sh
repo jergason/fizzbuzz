@@ -30,7 +30,7 @@ curl --silent http://${HOST}/RoomB \
 # should get the message
 let WHEN=`date +%s`000-10000 # 10 seconds ago
 let THEN=`date +%s`000+10000 # 10 seconds from now
-curl --silent http://${HOST}/RoomA?since=${WHEN}&until=${THEN} \
+curl --silent 'http://${HOST}/RoomA?since=${WHEN}&until=${THEN}' \
   -X POST \
   -H 'Content-Type: application/json' \
   -d '{ 
